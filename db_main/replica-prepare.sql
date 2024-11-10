@@ -1,0 +1,3 @@
+CREATE USER repl@'%' IDENTIFIED WITH 'caching_sha2_password' BY {PWD};
+GRANT REPLICATION SLAVE ON *.* TO repl@'%';
+FLUSH PRIVILEGES;

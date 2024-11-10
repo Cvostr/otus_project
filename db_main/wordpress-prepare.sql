@@ -1,0 +1,4 @@
+CREATE DATABASE wordpress;
+CREATE USER wordpress@localhost IDENTIFIED BY {PWD};
+GRANT SELECT,INSERT,UPDATE,DELETE,CREATE,DROP,ALTER on wordpress.* to wordpress@localhost;
+FLUSH PRIVILEGES;
