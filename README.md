@@ -7,7 +7,9 @@ sudo apt install docker.io
 
 ## Установка php + apache 2
 sudo apt install apache2 ghostscript libapache2-mod-php php php-bcmath php-curl php-imagick php-intl php-json php-mbstring php-mysql php-xml php-zip
-systemctl disable --now apache2
+
+## Установка nginx (на ВМ1)
+sudo apt install nginx
         
 # Загрузка образа mysql
 docker pull mysql:8.0
