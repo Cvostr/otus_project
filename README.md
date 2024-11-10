@@ -26,3 +26,10 @@ sudo apt install nginx
 
 # Загрузка образа mysql
 docker pull mysql:8.0
+
+# Порядок запуска
+1. mysql (master)
+2. mysql (slave)
+3. wordpress (master)
+4. wordpress (slave)
+5. nginx

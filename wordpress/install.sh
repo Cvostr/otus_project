@@ -1,6 +1,7 @@
 INSTALL_DIR="/var/www"
 WORDPRESS_DIR="$INSTALL_DIR/wordpress"
 WORDPRESS_CONF_PATH="/etc/apache2/sites-available/wordpress.conf"
+WORDPRESS_DB_HOST=192.168.0.131
 PORT=81
 
 sudo mkdir -p $INSTALL_DIR
@@ -19,3 +20,6 @@ sudo a2ensite wordpress
 sudo a2enmod rewrite
 sudo a2dissite 000-default
 sudo service apache2 reload
+
+sudo -u www-data cp wp-config.php /var/www/wordpress/wp-config.php
+sudo sed -i "s/{WP_DB_HOST}/$WORDPRESS_DB_HOST/" /var/www/wordpress/wp-config.php
