@@ -1,4 +1,4 @@
 CREATE DATABASE wordpress;
-CREATE USER wordpress@localhost IDENTIFIED BY {PWD};
+CREATE USER wordpress@localhost IDENTIFIED WITH 'caching_sha2_password' BY 'wordpress_pass';
 GRANT SELECT,INSERT,UPDATE,DELETE,CREATE,DROP,ALTER on wordpress.* to wordpress@localhost;
 FLUSH PRIVILEGES;

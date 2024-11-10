@@ -3,8 +3,6 @@ WORDPRESS_DIR="$INSTALL_DIR/wordpress"
 WORDPRESS_CONF_PATH="/etc/apache2/sites-available/wordpress.conf"
 PORT=81
 
-sudo systemctl enable --now apache2
-
 sudo mkdir -p $INSTALL_DIR
 sudo chown www-data: $INSTALL_DIR
 curl https://wordpress.org/latest.tar.gz | sudo -u www-data tar zx -C $INSTALL_DIR

@@ -1,0 +1,17 @@
+services:
+  wordpress_db:
+    image: mysql:8.0
+    command: "--log-bin"
+    container_name: wordpress_db
+    restart: always
+    ports:
+      - 3306:3306
+    volumes:
+      - ./conf:/etc/mysql/conf.d
+      - ./init:/docker-entrypoint-initdb.d/
+      - ./db_data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: secret
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: wordpress_pwd
