@@ -27,9 +27,21 @@ sudo apt install nginx
 # Загрузка образа mysql
 docker pull mysql:8.0
 
+# Загрузка образа node-exporter
+docker pull prom/node-exporter
+
+# Загрузка образов для мониторинга (на ВМ мониторинга)
+docker pull prom/prometheus:v2.55.1
+docker pull grafana/grafana:10.4.12
+docker pull prom/node-exporter
+
 # Порядок запуска
 1. mysql (master)
 2. mysql (slave)
 3. wordpress (master)
 4. wordpress (slave)
 5. nginx
+6. node_exporter (master)
+7. node_exporter (slave)
+
+8. 

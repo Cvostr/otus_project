@@ -1,1 +1,3 @@
 db_data
+monitoring/grafana/data
+monitoring/prometheus/data
