@@ -35,6 +35,11 @@ docker pull prom/prometheus:v2.55.1
 docker pull grafana/grafana:10.4.12
 docker pull prom/node-exporter
 
+# Загрузка образов ELK стека
+sudo docker pull kibana:8.15.3
+sudo docker pull logstash:8.15.3
+sudo docker pull elasticsearch:8.15.3
+
 # Порядок запуска
 1. mysql (master)
 2. mysql (slave)
