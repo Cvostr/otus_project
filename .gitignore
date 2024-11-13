@@ -2,3 +2,4 @@ db_data
 monitoring/grafana/data
 monitoring/prometheus/data
 monitoring/kibana/data
+monitoring/elasticsearch/data

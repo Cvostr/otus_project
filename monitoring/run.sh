@@ -1,3 +1,3 @@
 mkdir -p kibana/data
-
-sudo docker compose up -d
+mkdir -p elasticsearch/data
+mkdir -p logstash/data
