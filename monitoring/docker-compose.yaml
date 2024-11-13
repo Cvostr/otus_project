@@ -55,6 +55,8 @@ services:
     volumes:
       - ./logstash/data:/usr/share/logstash/data
       - ./logstash/logstash.conf:/usr/share/logstash/pipeline/logstash.conf
+    ports:
+      - 5044:5044
     environment:
       - xpack.monitoring.enabled=false
       - ELASTIC_USER=LOGSTASH
