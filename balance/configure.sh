@@ -1,5 +1,5 @@
-MAIN_ADDRESS=localhost:81
-SECONDARY_ADDRESS=192.168.0.130:81
+MAIN_ADDRESS=localhost:80
+SECONDARY_ADDRESS=192.168.0.130:80
 
 NGINX_CONF_PATH="/etc/nginx/sites-available/balance.conf"
 

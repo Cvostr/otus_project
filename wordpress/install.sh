@@ -2,7 +2,7 @@ INSTALL_DIR="/var/www"
 WORDPRESS_DIR="$INSTALL_DIR/wordpress"
 WORDPRESS_CONF_PATH="/etc/apache2/sites-available/wordpress.conf"
 WORDPRESS_DB_HOST=192.168.0.131
-PORT=81
+PORT=82
 
 sudo mkdir -p $INSTALL_DIR
 sudo chown www-data: $INSTALL_DIR
@@ -14,11 +14,13 @@ sudo sed -i "s+{WP_PATH}+$WORDPRESS_DIR+g" $WORDPRESS_CONF_PATH
 sudo sed -i "s/{PORT}/$PORT/g" $WORDPRESS_CONF_PATH
 sudo chown www-data: $WORDPRESS_CONF_PATH
 
-echo "Listen $PORT" | sudo tee /etc/apache2/ports.conf
+#echo "Listen $PORT" | sudo tee /etc/apache2/ports.conf
+sudo cp ports.conf /etc/apache2/ports.conf
+sudo sed -i "s/{PORT}/$PORT/" /etc/apache2/ports.conf
 
 sudo a2ensite wordpress
 sudo a2enmod rewrite
-sudo a2dissite 000-default
+#sudo a2dissite 000-default
 sudo service apache2 reload
 
 sudo -u www-data cp wp-config.php /var/www/wordpress/wp-config.php
