@@ -1,4 +1,5 @@
 db_data
+db_backup
 monitoring/grafana/data
 monitoring/prometheus/data
 monitoring/kibana/data

@@ -15,7 +15,7 @@ echo \
   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 sudo apt-get update
 
-sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin1~sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 sudo systemctl enable --now docker
 
 # Установка php + apache 2
@@ -23,6 +23,9 @@ sudo apt install apache2 ghostscript libapache2-mod-php php php-bcmath php-curl 
 
 # Установка nginx (на ВМ1)
 sudo apt install nginx
+
+# Установка mysql-client (для mysqldump)
+sudo apt install mysql-client
 
 # Загрузка образа mysql
 docker pull mysql:8.0
@@ -48,5 +51,6 @@ sudo docker pull elasticsearch:8.15.3
 5. nginx
 6. node_exporter (master)
 7. node_exporter (slave)
-
-8. 
+8. monitoring
+9. filebeat (master)
+10. filebeat (slave)
