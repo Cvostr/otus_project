@@ -47,8 +47,7 @@ sudo docker pull elasticsearch:8.15.3
 1. mysql (master)
 2. mysql (slave)
 3. wordpress (master)
-4. wordpress (slave)
-5. nginx
+5. nginx (master)
 6. node_exporter (master)
 7. node_exporter (slave)
 8. monitoring
