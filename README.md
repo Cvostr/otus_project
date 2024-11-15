@@ -20,6 +20,7 @@ sudo systemctl enable --now docker
 
 # Установка php + apache 2
 sudo apt install apache2 ghostscript libapache2-mod-php php php-bcmath php-curl php-imagick php-intl php-json php-mbstring php-mysql php-xml php-zip
+sudo systemctl enable --now apache2
 
 # Установка nginx (на ВМ1)
 sudo apt install nginx
