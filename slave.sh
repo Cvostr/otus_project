@@ -8,7 +8,7 @@ cd balance/page
 sh setup2.sh
 cd ../..
 
-cd node_exporter
+cd node-exporter
 sudo docker compose up -d
 cd ..
 

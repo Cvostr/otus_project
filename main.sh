@@ -16,7 +16,7 @@ cd ..
 sh configure.sh
 cd ..
 
-cd node_exporter
+cd node-exporter
 sudo docker compose up -d
 cd ..
 
